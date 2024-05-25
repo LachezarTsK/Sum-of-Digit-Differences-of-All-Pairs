@@ -10,7 +10,7 @@ class Solution {
 
 public:
     long long sumDigitDifferences(vector<int>& input) const {
-        long sumDigitDifferences = 0;
+        long long sumDigitDifferences = 0;
         while (!allDigitsAreProcessed(input)) {
             array<int, NUMBER_OF_DIGITS> frequency{};
             calculateFrequencyForDigitPlace(input, frequency);
@@ -32,8 +32,8 @@ private:
         }
     }
 
-    long calculateSumDigitDifferencesForDigitPlace(span<const int> frequency, int numberOfInputIntegers) const {
-        long sumDigitDifferences = 0;
+    long long calculateSumDigitDifferencesForDigitPlace(span<const int> frequency, int numberOfInputIntegers) const {
+        long long sumDigitDifferences = 0;
         int sumProcessedFrequencies = 0;
 
         for (const auto& currentFrequency : frequency) {
